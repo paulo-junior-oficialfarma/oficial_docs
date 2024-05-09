@@ -1,0 +1,217 @@
+openapi: 3.0.3
+servers:
+  - url: http://localhost:4000
+info:
+  title: Influencers API REST Endpoints
+  version: 1.0.0
+  description: Swagger referente a plataforma Influenciadores.
+paths:
+  /login:
+    post:
+      tags: 
+       - influencer
+      summary: Endpoint Login
+      description: Login
+      operationId: loginUser
+      requestBody: # Use requestBody for body parameters
+        content:
+          application/json: # Specify the content type
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: The user email for login
+                  required: true
+                password:
+                  type: string
+                  description: The password for login in clear text
+                  required: true
+      responses:
+        "200":
+          description: successful operation
+          headers:
+            X-Rate-Limit:
+              description: calls per hour allowed by the user
+              schema:
+                type: integer
+                format: int32
+            X-Expires-After:
+              description: date in UTC when token expires
+              schema:
+                type: string
+                format: date-time
+          content:
+            application/json:
+              schema:
+                type: string
+              examples:
+                response:
+                  value: OK
+            application/xml:
+              schema:
+                type: string
+              examples:
+                response:
+                  value: <Message> OK </Message>
+            text/plain:
+              examples:
+                response:
+                  value: OK
+        "400":
+          description: Invalid username/password supplied
+
+  /users/create:
+    post:
+      tags:
+       - influencer
+      summary: Endpoint de Registro
+      description: Registro
+      operationId: userRegistration
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user:
+                  type: object
+                  properties:
+                    firstname:
+                      type: string
+                      description: First name
+                      required: true
+                    lastname:
+                      type: string
+                      description: Last name
+                      required: true
+                    email:
+                      type: string
+                      description: User email
+                      required: true
+                    taxvat:
+                      type: string
+                      description: Tax VAT
+                      required: true
+                    doc_id:
+                      type: string
+                      description: Document ID
+                      required: true
+                    datebirth:
+                      type: string
+                      description: Date of birth
+                      required: true
+                address:
+                  type: object
+                  properties:
+                    phone:
+                      type: string
+                      description: Phone number
+                      required: true
+                    state:
+                      type: string
+                      description: State
+                      required: true
+                    city:
+                      type: string
+                      description: City
+                      required: true
+                    postcode:
+                      type: string
+                      description: Postal code
+                      required: true
+                    street:
+                      type: string
+                      description: Street
+                      required: true
+                    complement:
+                      type: string
+                      description: Complement
+                      required: true
+                social_media:
+                  type: object
+                  properties:
+                    instagram_followers:
+                      type: integer
+                      description: Instagram followers count
+                      required: true
+                    youtube_channel:
+                      type: string
+                      description: YouTube channel
+                      required: true
+                    instagram_username:
+                      type: string
+                      description: Instagram username
+                      required: true
+                    twitter_username:
+                      type: string
+                      description: Twitter username
+                      required: true
+                    tiktok_username:
+                      type: string
+                      description: TikTok username
+                      required: true
+                    coupon_name:
+                      type: string
+                      description: Coupon name
+                      required: true
+                payment_data:
+                  type: object
+                  properties:
+                    holder_name:
+                      type: string
+                      description: Holder name
+                      required: true
+                    bank:
+                      type: string
+                      description: Bank name
+                      required: true
+                    account_number:
+                      type: string
+                      description: Account number
+                      required: true
+                    agency:
+                      type: string
+                      description: Agency
+                      required: true
+                    pix_number:
+                      type: string
+                      description: PIX number
+                      required: true
+                    account_type:
+                      type: string
+                      description: Account type
+                      required: true
+      responses:
+        "201":
+          description: user created successfully
+          headers:
+            X-Rate-Limit:
+              description: calls per hour allowed by the user
+              schema:
+                type: integer
+                format: int32
+            X-Expires-After:
+              description: date in UTC when token expires
+              schema:
+                type: string
+                format: date-time
+          content:
+            application/json:
+              schema:
+                type: string
+              examples:
+                response:
+                  value: Created
+            application/xml:
+              schema:
+                type: string
+              examples:
+                response:
+                  value: <Message> Created </Message>
+            text/plain:
+              examples:
+                response:
+                  value: Created
+        "400":
+          description: Bad request, check payload and try again

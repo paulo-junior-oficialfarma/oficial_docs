@@ -1,0 +1,1 @@
+{"openapi":"","info":{"title":"","version":""},"paths":{"/login":{"post":{"responses":{"200":{"description":"OK"},"401":{"description":"Bad Request"}}}},"/users/create":{"post":{"responses":{"201":{"description":"Created"},"400":{"description":"Bad Request"}}}}},"components":{}}
