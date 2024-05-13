@@ -7,7 +7,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Oficial Docs",
-  tagline: "Cnhecimento a um clique de distância",
+  tagline: "Conhecimento a um clique de distância",
   url: "https://your-docusaurus-test-site.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -29,7 +29,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-          "https://github.com/paulo-junior-oficialfarma/oficial_docs/tree/master/",
+            "https://github.com/paulo-junior-oficialfarma/oficial_docs/tree/master/",
           docLayoutComponent: "@theme/DocPage",
           docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi
         },
@@ -69,10 +69,17 @@ const config = {
             label: "Documentações",
           },
           {
-            label: "Petstore API",
+            type: "dropdown",
+            label: "API",
             position: "left",
-            to: "/docs/category/petstore-api",
+            items: [
+              {
+                label: "Projeto Influenciadores",
+                to: "/docs/projeto_influencers/influencers_api/influencers-api-rest-endpoints"
+              }
+            ]
           },
+
           {
             href: "https://github.com/facebook/docusaurus",
             label: "GitHub",
@@ -151,7 +158,11 @@ const config = {
           },
           influencers: {
             specPath: "api/influencers.yaml",
-            outputDir: "docs/projeto_influencers/api",
+            outputDir: "docs/projeto_influencers/influencers_api",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag",
+            },
           },
         },
       },

@@ -29,18 +29,19 @@ const sidebars = {
       // @ts-ignore
       items: require("./docs/petstore/sidebar.js")
     }
-  ]
+  ],
 
   // But you can create a sidebar manually
-  /*
-  tutorialSidebar: [
+  
+  testSidebar: [
     {
       type: 'category',
-      label: 'Tutorial',
-      items: ['hello'],
+      label: 'Projeto Influencers',
+      // @ts-ignore
+      items: require("./docs/projeto_influencers/sidebar.js")
     },
   ],
-   */
+   
 };
 
 module.exports = sidebars;
