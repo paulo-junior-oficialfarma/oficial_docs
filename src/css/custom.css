@@ -75,3 +75,14 @@
   content: "patch";
   background-color: var(--openapi-code-orange);
 }
+
+.project {
+  text-decoration: none;
+  color: black;
+}
+
+.project:hover {
+  border: solid #e40521 1px;
+  border-radius: 15px;
+  text-decoration: none;
+}
