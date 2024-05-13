@@ -27,6 +27,17 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  .project {
+    color:white !important;
+  }
+
+  h1.hero__title {
+    color: #ffffff !important;
+  }
+
+  p.hero__subtitle {
+    color: #ffffff !important;
+  }
 }
 
 /* Sidebar Method labels */
@@ -85,4 +96,11 @@
   border: solid #e40521 1px;
   border-radius: 15px;
   text-decoration: none;
+}
+
+.buttons_src-pages-index-module>.button--secondary:hover {
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background-color: #e40521;
+  color:white !important;
 }

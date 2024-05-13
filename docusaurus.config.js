@@ -17,7 +17,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "oficial-farma", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  projectName: "oficial-docs", // Usually your repo name.
 
   presets: [
     [
@@ -62,11 +62,42 @@ const config = {
           src: "img/undraw_oficialfarma_logo.svg",
         },
         items: [
+          // {
+          //   type: "doc",
+          //   docId: "intro",
+          //   position: "left",
+          //   label: "Documentações",
+          // },
           {
-            type: "doc",
-            docId: "intro",
-            position: "left",
+            type: "dropdown",
             label: "Documentações",
+            position: "left",
+            items: [
+              {
+                label: "Projeto Influenciadores",
+                to: "docs/category/projeto-influenciadores"
+              },
+              {
+                label: "Integrador Oficial",
+                to: "docs/category/integrador-oficial"
+              },
+              {
+                label: "Master",
+                to: "docs/category/master"
+              },
+              {
+                label: "Medicator",
+                to: "docs/category/medicator"
+              },
+              {
+                label: "E-Ship",
+                to: "docs/category/e-ship"
+              },
+              {
+                label: "Salesforce",
+                to: "docs/category/salesforce"
+              },
+            ]
           },
           {
             type: "dropdown",
@@ -76,12 +107,16 @@ const config = {
               {
                 label: "Projeto Influenciadores",
                 to: "/docs/projeto_influencers/influencers_api/influencers-api-rest-endpoints"
+              },
+              {
+                label: "Integrador Oficial",
+                to: "/docs/category/integrador-oficial"
               }
             ]
           },
 
           {
-            href: "https://github.com/facebook/docusaurus",
+            href: "https://github.com/oficialfarma-projetos",
             label: "GitHub",
             position: "right",
           },
@@ -125,7 +160,7 @@ const config = {
               },
               {
                 label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
+                href: "https://github.com/oficialfarma-projetos",
               },
             ],
           },

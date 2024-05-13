@@ -1,15 +1,10 @@
 module.exports = [
-  { type: "doc", id: "projeto_influencers/about" },
+  { type: "doc", id: "projeto_influencers/influencers_api/influencers-api-rest-endpoints" },
   {
     type: "category",
-    label: "DOcs",
-    link: { type: "doc", id: "projeto_influencers/influencer" },
+    label: "API",
+    link: { type: "doc", id: "projeto_influencers/influencers_api/influencer" },
     items: [
-      {
-        type: "doc",
-        id: "projeto_influencers/about",
-        label: "Sobre"
-      },
       {
         type: "doc",
         id: "projeto_influencers/influencers_api/login-user",

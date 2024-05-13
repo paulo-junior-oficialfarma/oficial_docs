@@ -12,7 +12,7 @@ const FeatureList = [
         used to get your website up and running quickly.
       </>
     ),
-    href: '/docs/integrador/about', // Add the href prop here
+    href: '/docs/category/integrador-oficial',
   },
 
   {
@@ -24,7 +24,7 @@ const FeatureList = [
         ahead and move your docs into the <code>docs</code> directory.
       </>
     ),
-    href: '/docs/projeto_influencers/about'
+    href: '/docs/category/projeto-influenciadores'
   },
 
   {
@@ -36,11 +36,11 @@ const FeatureList = [
         ahead and move your docs into the <code>docs</code> directory.
       </>
     ),
-    href: '/dashboard-influenciadores', // Add the href prop here
+    href: '/docs/category/master',
   },
 
   {
-    title: 'ERP Medicator',
+    title: 'Medicator',
     Svg: require('@site/static/img/home/logo_medicator.svg').default,
     description: (
       <>
@@ -48,7 +48,7 @@ const FeatureList = [
         be extended while reusing the same header and footer.
       </>
     ),
-    href: '/dashboard-influenciadores', // Add the href prop here
+    href: '/docs/category/medicator',
   },
 
   {
@@ -60,7 +60,7 @@ const FeatureList = [
         be extended while reusing the same header and footer.
       </>
     ),
-    href: '/dashboard-influenciadores', // Add the href prop here
+    href: '/docs/category/salesforce',
   },
 
   {
@@ -72,7 +72,7 @@ const FeatureList = [
         be extended while reusing the same header and footer.
       </>
     ),
-    href: '/dashboard-influenciadores', // Add the href prop here
+    href: '/docs/category/e-ship',
   },
 ];
 
