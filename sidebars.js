@@ -33,12 +33,30 @@ const sidebars = {
 
   // But you can create a sidebar manually
   
-  testSidebar: [
+  projetoInfluencersSidebar: [
     {
       type: 'category',
       label: 'Projeto Influencers',
       // @ts-ignore
       items: require("./docs/projeto_influencers/sidebar.js")
+    },
+  ],
+
+  projetoInfluencersApiSidebar: [
+    {
+      type: 'category',
+      label: 'Projeto Influencers API',
+      // @ts-ignore
+      items: require("./docs/projeto_influencers/influencers_api/sidebar.js")
+    },
+  ],
+
+  integradorSideBar: [
+    {
+      type: 'category',
+      label: 'Integrador Oficial',
+      // @ts-ignore
+      items: require("./docs/integrador/sidebar.js")
     },
   ],
    
