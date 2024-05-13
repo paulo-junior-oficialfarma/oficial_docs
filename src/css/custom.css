@@ -28,7 +28,19 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 
-  .project, h1.hero__title, p.hero__subtitle { color: #ffffff!important; }
+ /* .project, h1.hero__title, p.hero__subtitle { color: #ffffff!important; } */
+}
+
+[data-theme='dark'] .project {
+  color: #ffffff!important;
+}
+
+[data-theme='dark'] h1.hero__title {
+  color: #ffffff!important;
+}
+
+[data-theme='dark'] p.hero__subtitle {
+  color: #ffffff!important;
 }
 
 /* Sidebar Method labels */
