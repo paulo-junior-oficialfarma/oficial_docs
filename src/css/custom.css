@@ -27,17 +27,8 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  .project {
-    color:white !important;
-  }
 
-  h1.hero__title {
-    color: #ffffff !important;
-  }
-
-  p.hero__subtitle {
-    color: #ffffff !important;
-  }
+  .project, h1.hero__title, p.hero__subtitle { color: #ffffff!important; }
 }
 
 /* Sidebar Method labels */
